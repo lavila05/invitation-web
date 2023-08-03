@@ -1,0 +1,36 @@
+.sep-button {
+  display: inline-block;
+  margin: 5px;
+}
+
+.example-large-box {
+  height: 450px;
+  width: 320px;
+  border-radius: 10%;
+  justify-content: space-around;
+}
+
+.example-form {
+  width: auto;
+  padding: 15px;
+  margin: 35px;
+  text-align: center;
+  background-color: white;
+}
+
+.example-full-width {
+  width: 75%;
+  padding: auto;
+  margin: auto ;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.sep-button {
+  padding: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  width: auto;
+}

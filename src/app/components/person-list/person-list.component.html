@@ -1,0 +1,36 @@
+<div class="example-container">
+  <h2>Postulantes</h2>
+
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item.name}}
+      <div class="sep-button">
+        <button type="button" mat-raised-button color="primary" (click)="modifyPerson(item)" style="margin-right: 5px;">Editar</button>
+        <button type="button" mat-raised-button color="primary" (click)="deletePerson(item.oid)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Invitados</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.name}}</div>
+  </div>
+  <div class="container-button">
+    <tr><button type="button" mat-raised-button color="primary" (click)="sendInvitation()" [value]="done">Invitar</button></tr>
+  </div>
+
+</div>

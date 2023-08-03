@@ -1,0 +1,37 @@
+<form class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr><td><mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Pepito" type="text" [(ngModel)]="local_data.name" name="name">
+    </mat-form-field></td>
+  </tr>
+  <tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Apellido</mat-label>
+      <input matInput placeholder="Perez" [(ngModel)]="data.lastName" name="local_data.lastName">
+    </mat-form-field></td>
+   </tr>
+
+    <tr><td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Tipo de documento</mat-label>
+        <mat-select [(ngModel)]="data.documentType" name="local_data.documentType">
+          <mat-option value="DNI">DNI</mat-option>
+          <mat-option value="CUIT">CUIT</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Número de documento</mat-label>
+      <input matInput type="number" maxlength="8" placeholder="35537983" [(ngModel)]="local_data.documentNumber" name="data.documentNumber">
+    </mat-form-field></td></tr>
+    <tr>
+      <div class="sep-button">
+        <button type="button" mat-raised-button color="primary" (click)="modifyPerson()" style="margin-right: 5px;">Modificar</button>
+        <button type="button" mat-raised-button color="primary" (click)="closeModify()">Cerrar</button>
+      </div>
+    </tr>
+  </table>
+</form>
